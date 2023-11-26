@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1> Devices: </h1>
+    
+    {% for item in devices %}
+    <div >
+        <strong> TYP:</strong> {{ item.typ }}
+        <strong> STATUS: </strong> {{ item.status }}
+        <strong> MESSAGE:</strong> {{ item.message }}
+        <strong> ZAKTUALIZOWANO:</strong> {{ item.updated_at }}
+        <a href='devices_upd/{{item.id}}'>
+            <button>MODIFY</button>
+        </a>
+        <a href='devices_del/{{item.id}}'>
+            <button>REMOVE</button>
+        </a>
+        
+    </div>
+    {% endfor %}
+    <button style="margin:10px">
+        <a href='devices_add' style="text-decoration:None; color:black;">ADD DEVICE </a>
+    </button>
+</body>
+</html>
