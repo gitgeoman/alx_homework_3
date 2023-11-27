@@ -17,5 +17,5 @@ class Device(models.Model):
     message = models.TextField()
     updated_at = models.DateTimeField(auto_now_add=True)
 
-    
+
     

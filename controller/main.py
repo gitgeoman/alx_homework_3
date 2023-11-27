@@ -30,7 +30,7 @@ if __name__ == '__main__':
     iot_service.test_device()
 
     # tworzy programy (listy Message)
-    lista_messagy: dict = [
+    lista_messagy: list[Message] = [
             Message(device_id=iot_service.devices[0].id, msg_type=MessageType.SWITCH_ON),
             Message(device_id=iot_service.devices[0].id, msg_type=MessageType.CHANGE_COLOR),
             Message(device_id=iot_service.devices[0].id, msg_type=MessageType.SWITCH_OFF),
