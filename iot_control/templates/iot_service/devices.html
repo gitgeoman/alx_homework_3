@@ -9,16 +9,16 @@
     
     {% for item in devices %}
     <div >
-        <strong> TYP:</strong> {{ item.typ }}
-        <strong> STATUS: </strong> {{ item.status }}
-        <strong> MESSAGE:</strong> {{ item.message }}
+        <strong> id:</strong> {{ item.id }}
+        <strong> msg_type:</strong> {{ item.msg_type }}
+        <strong> device_type: </strong> {{ item.device_type }}
+        <strong> status:</strong> {{ item.status }}
+        <strong> message_type:</strong> {{ item.message_type }}
+        <strong> message:</strong> {{ item.message }}
         <strong> ZAKTUALIZOWANO:</strong> {{ item.updated_at }}
-        <a href='devices_upd/{{item.id}}'>
-            <button>MODIFY</button>
-        </a>
-        <a href='devices_del/{{item.id}}'>
-            <button>REMOVE</button>
-        </a>
+
+        <a href='devices_upd/{{item.id}}'><button>MODIFY</button></a>
+        <a href='devices_del/{{item.id}}'><button>REMOVE</button></a>
         
     </div>
     {% endfor %}
